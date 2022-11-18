@@ -7,3 +7,6 @@ recap.Go();
 
 var ds = new DataStructures();
 ds.Go();
+
+var l = new Loops();
+l.Go();

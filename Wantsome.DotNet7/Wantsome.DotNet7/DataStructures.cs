@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Wantsome.DotNet7
+﻿namespace Wantsome.DotNet7
 {
     internal class DataStructures
     {
@@ -13,16 +7,16 @@ namespace Wantsome.DotNet7
             // ARRAY
             Console.WriteLine();
             Console.WriteLine("----------------------- ARRAY -----------------------");
-            int[] myArray = new int[] {1, 2, 3, 4, 5};
+            int[] myArray = new int[] { 1, 2, 3, 4, 5 };
 
             int[] myArray2 = new int[5];
             myArray2[0] = 12;
             myArray2[1] = 15;
 
-            Console.WriteLine("myArray2[1]: "+ myArray2[1]);
+            Console.WriteLine("myArray2[1]: " + myArray2[1]);
             Console.WriteLine("myArray2[2]: " + myArray2[2]);
 
-            int[] myArray3 = new int[5] {1, 2, 3, 4, 5};
+            int[] myArray3 = new int[5] { 1, 2, 3, 4, 5 };
 
             int sum = myArray3[2] + myArray3[3] + myArray2[1] + myArray[4];
             Console.WriteLine("sum: " + sum);
@@ -32,22 +26,22 @@ namespace Wantsome.DotNet7
 
             //1 2 3
             //4 5 6
-            int[,] matrix = new int[2,3];
-            matrix[0,0] = 1;
-            matrix[0,1] = 2;
-            matrix[0,2] = 3;
-            matrix[1,0] = 4;
-            matrix[1,1] = 5;
-            matrix[1,2] = 6;
+            int[,] matrix = new int[2, 3];
+            matrix[0, 0] = 1;
+            matrix[0, 1] = 2;
+            matrix[0, 2] = 3;
+            matrix[1, 0] = 4;
+            matrix[1, 1] = 5;
+            matrix[1, 2] = 6;
 
-            Console.WriteLine(matrix[0,2]);
-            matrix[0,2] = 3456789;
+            Console.WriteLine(matrix[0, 2]);
+            matrix[0, 2] = 3456789;
             Console.WriteLine(matrix[0, 2]);
 
             //1
             //Declare an array that will have 5 integer elements (12, 14, 34, 567, 34).
             //Add those 5 elements into the array one by one. Print the value of the second element in the array.
-            
+
             Console.WriteLine();
             Console.WriteLine("Ex1");
             int[] n1 = new int[5];
@@ -76,7 +70,7 @@ namespace Wantsome.DotNet7
             Console.WriteLine();
             Console.WriteLine("----------------------- LIST -----------------------");
             List<int> l1 = new List<int>();
-            List<int> l2 = new List<int> { 1, 2, 3, 4, 5};
+            List<int> l2 = new List<int> { 1, 2, 3, 4, 5 };
             List<int> l3 = new List<int>(5) { 1, 2, 3, 4, 5 };
 
             l2[0] = 2;
@@ -124,7 +118,7 @@ namespace Wantsome.DotNet7
             Console.WriteLine("----------------------- QUEUE -----------------------");
             Queue<int> q = new Queue<int>();
             q.Enqueue(1);
-            q.Enqueue(2);   
+            q.Enqueue(2);
             q.Enqueue(3);
 
             Console.WriteLine(q.ElementAt(0));
@@ -132,7 +126,7 @@ namespace Wantsome.DotNet7
             int elem = q.Dequeue();
             Console.WriteLine("elem: " + elem);
             Console.WriteLine(q.ElementAt(0));
-            Console.WriteLine("peek: "+ q.Peek());
+            Console.WriteLine("peek: " + q.Peek());
             Console.WriteLine(q.ElementAt(0));
 
             Console.WriteLine("contains: " + q.Contains(456));
@@ -180,6 +174,65 @@ namespace Wantsome.DotNet7
             s1.Push(567);
             s1.Push(34);
             Console.WriteLine(s1.ElementAt(1));
+
+            Console.WriteLine("------------------------ DICTIONARY ----------------");
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+            Dictionary<int, int> dict2 = new Dictionary<int, int> { { 1, 1 }, { 2, 4 }, { 3, 9 }, { 345, 45643455 } };
+
+            Console.WriteLine(dict2[345]);
+
+            Dictionary<string, string> dict3 = new Dictionary<string, string>();
+            dict3.Add("a", "Ana");
+            dict3.Add("b", "Bogdan");
+
+            Console.WriteLine(dict3["b"]);
+
+            Console.WriteLine(dict3.Count);
+            Console.WriteLine(dict3.ContainsKey("c"));
+            Console.WriteLine(dict3.ContainsValue("Ana"));
+
+            Dictionary<int, List<string>> dict4 = new Dictionary<int, List<string>>();
+
+            List<string> l6 = new List<string> { "Ana", "Maria" };
+
+            dict4.Add(1, l6);
+            dict4.Add(2, new List<string> { "Bogdan", "Razvan" });
+
+            Console.WriteLine(dict4[1][0]);
+
+            Dictionary<string, List<string>> dict5 = new Dictionary<string, List<string>>();
+            dict5.Add("nico", new List<string> { "n", "i", "c", "o" });
+            dict5.Add("ana", new List<string> { "a", "n", "a" });
+
+            Console.WriteLine(dict5["nico"][0] + ", " + dict5["nico"][1]);
+
+            //1
+            //Declare a dictionary that will have 5 elements (key value pair of int and string, grade and child name).
+            //Add those 5 elements into the dictionary one by one. Print the value of one of the elements in the dictionary.
+
+            Console.WriteLine();
+            Dictionary<int, string> dict6 = new Dictionary<int, string>();
+            dict6.Add(5, "Ana");
+            dict6.Add(6, "Ioan");
+            dict6.Add(10, "Maria");
+            dict6.Add(8, "Teodora");
+            dict6.Add(9, "Mihaela");
+            Console.WriteLine(dict6[8]);
+
+            //2
+            //Declare a dictionary that will contain 5 elements (key value pair of int and a list of strings, grade and children names).
+            //Print the name of the first child in the dictionary that got a 10 and the second child that got an 8.
+
+            Console.WriteLine();
+            Dictionary<int, List<string>> dict1 = new Dictionary<int, List<string>> 
+            {
+                { 5, new List<string>() { "Ana" }  },
+                { 6, new List<string>() { "Ioana", "Ioan" }  },
+                { 8, new List<string>() { "Diana", "Andrei", "Laura" }  },
+                { 10, new List<string>() { "Mihaela" }  },
+            };
+            Console.WriteLine(dict1[10][0]);
+            Console.WriteLine(dict1[8][1]);
         }
     }
 }
