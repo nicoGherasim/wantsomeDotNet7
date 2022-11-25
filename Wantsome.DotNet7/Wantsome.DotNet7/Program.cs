@@ -10,3 +10,6 @@ ds.Go();
 
 var l = new Loops();
 l.Go();
+
+var alg = new Algorithms();
+alg.Go();
