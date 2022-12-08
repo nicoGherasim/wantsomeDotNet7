@@ -65,8 +65,7 @@
 
             Console.WriteLine(l1[5]);
 
-            //1            
-            // Print all even numbers from 1 to 15
+            //1 Print all even numbers from 1 to 15
 
             Console.WriteLine();
             for (int i = 1; i <= 15; i++)
@@ -76,7 +75,7 @@
                     Console.WriteLine(i);
                 }
             }
-            //done differently
+            //1 done differently
             for (int i = 2; i <= 14; i += 2) // -> i = i + 2
             {
                 Console.WriteLine(i);
