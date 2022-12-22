@@ -1,5 +1,4 @@
-﻿
-namespace Wantsome.DotNet7.Homeworks
+﻿namespace Wantsome.DotNet7.Homeworks
 {
     internal class HomeworkDataStructures
     {
